@@ -6,7 +6,7 @@ package com.trybe.java.regraprogressao;
 public class App {
 
   /**
-   * Metodo main.
+   * Metodo main. Here we go
    */
   public static void main(String[] args) {
   }
