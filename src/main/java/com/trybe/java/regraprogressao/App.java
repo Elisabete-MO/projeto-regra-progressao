@@ -13,19 +13,25 @@ public class App {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Digite a quantidade de atividades para cadastrar:");
-    int activity_number = scanner.nextInt();
+    int activityNumber = scanner.nextInt();
+    scanner.nextLine();
 
-    String[] activity_names = new String[activity_number];
-    int[] activity_weights = new int[activity_number];
+    String[] activitiesNames = new String[activityNumber];
+    int[] activitiesWeights = new int[activityNumber];
+    int[] activitiesGrades = new int[activityNumber];
 
-    for (int i = 0; i < activity_number; i++) {
-      System.out.println("Digite o nome da atividade " + i + ":");
-      String activity_name = scanner.nextLine();
-      activity_names[i] = activity_name;
+    for (int i = 0; i < activityNumber; i++) {
+      System.out.println("Digite o nome da atividade " + (i + 1) + ":");
+      String activityName = scanner.nextLine();
+      activitiesNames[i] = activityName;
 
-      System.out.println("Digite o peso da atividade " + i + ":");
-      int activity_weight = scanner.nextInt();
-      activity_weights[i] = activity_weight;
+      System.out.println("Digite o peso da atividade " + (i + 1) + ":");
+      String activityWeight = scanner.nextLine();
+      activitiesWeights[i] = Short.parseShort(activityWeight);
+
+      System.out.println("Digite a nota obtida para " + activityName + ":");
+      String activityGrade = scanner.nextLine();
+      activitiesGrades[i] = Short.parseShort(activityGrade);
     }
     scanner.close();
   }
